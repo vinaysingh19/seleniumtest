@@ -15,7 +15,10 @@ public class tc1 {
 		@BeforeMethod
 		public void launch() {
 		  System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-		  driver = new ChromeDriver();
+	         /* ChromeOptions Options = new ChromeOptions();
+		  Options.addArguments("headless");
+		  driver = new ChromeDriver(Options); */
+		  driver = new ChromeDriver();  //comment this to run in headless mode and uncomment the above
 		  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		  driver.get("http://13.233.198.241:32768/gameoflife/");
